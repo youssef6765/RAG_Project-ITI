@@ -19,5 +19,5 @@ class RAGService:
 
     def query(self, question: str):
         docs = self.retrieval.retrieve(question)
-        answer, sources = self.generation.generate(question, docs)
-        return answer, sources
+        answer, sources, images = self.generation.generate(question, docs)
+        return answer, sources, images

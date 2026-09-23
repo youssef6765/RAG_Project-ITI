@@ -17,5 +17,5 @@ def health(request: Request):
 
 @router.post("/query", response_model=QueryResponse)
 def query(payload: QueryRequest, request: Request):
-    answer, sources = request.app.state.rag_service.query(payload.question)
-    return QueryResponse(answer=answer, sources=sources)
+    answer, sources, images = request.app.state.rag_service.query(payload.question)
+    return QueryResponse(answer=answer, sources=sources, images=images)

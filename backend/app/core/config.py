@@ -6,7 +6,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Settings(BaseSettings):
     app_name: str = "RAG Document Assistant"
     ollama_base_url: str = "http://localhost:11434"
-    llm_model: str = "llama3.2:3b"
+    llm_model: str = "qwen2.5vl:7b"
     embedding_model: str = "nomic-embed-text"
     top_k: int = 5
 
